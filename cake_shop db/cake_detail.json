@@ -1,0 +1,161 @@
+[{
+  "_id": "63918d130bab95b152cefa18",
+  "cake_id": 1,
+  "cake_img": "/cake_img/C1_9857.png",
+  "cake_name": "Black Forest Cake",
+  "cat_id": 1,
+  "description": "1 kg of Black Forest Cake with shredded dark chocolate on top",
+  "price": 1500
+},{
+  "_id": "6396cd0fad94587143bfe651",
+  "cake_id": 2,
+  "cake_img": "/cake_img/C2_7007.png",
+  "cake_name": "Rasmalai Cake",
+  "cat_id": 1,
+  "description": "Rasmalai Cake of 1 kg",
+  "price": 1500
+},{
+  "_id": "6396cd60ad94587143bfe652",
+  "cake_id": 3,
+  "cake_img": "/cake_img/C3_7217.png",
+  "cake_name": "Raspberry Cake",
+  "cat_id": 2,
+  "description": "1 kg of Raspberry Cake with fresh Raspeberries on top",
+  "price": 2000
+},{
+  "_id": "6396cddcad94587143bfe653",
+  "cake_id": 4,
+  "cake_img": "/cake_img/C4_8428.png",
+  "cake_name": "Rainbow Cake",
+  "cat_id": 3,
+  "description": "1 kg of Rainbow Cake has creamy and multi flavour.",
+  "price": 1500
+},{
+  "_id": "6396ce3cad94587143bfe654",
+  "cake_id": 5,
+  "cake_img": "/cake_img/C5_3357.png",
+  "cake_name": "Red velvet Cake",
+  "cat_id": 4,
+  "description": "1 kg of Red velvet cake has spongy and velvety texture.",
+  "price": 2500
+},{
+  "_id": "6396ce93ad94587143bfe655",
+  "cake_id": 6,
+  "cake_img": "/cake_img/C6_4060.png",
+  "cake_name": "Vanilla tea cake",
+  "cat_id": 1,
+  "description": "500 gms of Vanilla tea cake has sweet and sour taste that can be enjoy with tea!",
+  "price": 700
+},{
+  "_id": "6396ced6ad94587143bfe656",
+  "cake_id": 7,
+  "cake_img": "/cake_img/C7_5731.png",
+  "cake_name": "Pineapple Cake",
+  "cat_id": 3,
+  "description": "1 kg of Pineapple Cake with fresh pineapple on top!",
+  "price": 1500
+},{
+  "_id": "6396cf90ad94587143bfe657",
+  "cake_id": 8,
+  "cake_img": "/cake_img/C8_1592.png",
+  "cake_name": "Blueberry Cake",
+  "cat_id": 1,
+  "description": "1 kg of Blueberry cake with fresh and juicy blueberries on top.",
+  "price": 2000
+},{
+  "_id": "6396cfe4ad94587143bfe658",
+  "cake_id": 9,
+  "cake_img": "/cake_img/C9_5341.png",
+  "cake_name": "Oreo Cake",
+  "cat_id": 2,
+  "description": "1 kg of Oreo cake with crunchy oreo cookie and cream inside.",
+  "price": 2000
+},{
+  "_id": "6396d05fad94587143bfe659",
+  "cake_id": 10,
+  "cake_img": "/cake_img/C10_2642.png",
+  "cake_name": "Kitkat cake",
+  "cat_id": 1,
+  "description": "1 kg of kitkat cake with crunchy kitkat pieces inside and fresh cherries on top.",
+  "price": 1500
+},{
+  "_id": "6396d19bad94587143bfe65a",
+  "cake_id": 11,
+  "cake_img": "/cake_img/C11_7711.png",
+  "cake_name": "Fruit Cake",
+  "cat_id": 2,
+  "description": "Fruit Cake served with fresh fruits and freshed cream.",
+  "price": 1500
+},{
+  "_id": "6396d673ad94587143bfe65b",
+  "cake_id": 12,
+  "cake_img": "/cake_img/C12_1377.png",
+  "cake_name": "White chocolate cake",
+  "cat_id": 2,
+  "description": "1 kg of white chocolate cake shredded white chocolate on top.",
+  "price": 1500
+},{
+  "_id": "639813f9c8800bd98bda771e",
+  "cake_id": 13,
+  "cake_img": "/cake_img/C13_9085.png",
+  "cake_name": "Choco Vanilla Cake",
+  "cat_id": 2,
+  "description": "1 kg of choco vanilla cake with with crunchy dry fruits",
+  "price": 2500
+},{
+  "_id": "639814e9c8800bd98bda771f",
+  "cake_id": 14,
+  "cake_img": "/cake_img/C14_4481.png",
+  "cake_name": "choco almond cake",
+  "cat_id": 3,
+  "description": "1 kg of choco almond cake with chocolate coated almomds inside.",
+  "price": 2500
+},{
+  "_id": "639815aac8800bd98bda7720",
+  "cake_id": 15,
+  "cake_img": "/cake_img/C15_6500.png",
+  "cake_name": "vanilla rose cake",
+  "cat_id": 3,
+  "description": "1 kg of vanilla rose cake has rich rose flavour with rose petlas on top.",
+  "price": 2000
+},{
+  "_id": "639816fc9defdf58586ef567",
+  "cake_id": 16,
+  "cake_img": "/cake_img/C16_4906.png",
+  "cake_name": "vanilla alpenlibe cake",
+  "cat_id": 3,
+  "description": "1 kg of vanilla alpenlibe cake with marble finished and dripped chocolate ganache on top.",
+  "price": 2500
+},{
+  "_id": "6398176e9defdf58586ef568",
+  "cake_id": 17,
+  "cake_img": "/cake_img/C17_3322.png",
+  "cake_name": "Dark chocolate cake",
+  "cat_id": 4,
+  "description": "1 kg of Dark chocolate cake with chunks of dark chocolate inside.",
+  "price": 2500
+},{
+  "_id": "639817e99defdf58586ef569",
+  "cake_id": 18,
+  "cake_img": "/cake_img/C18_7476.png",
+  "cake_name": "vanilla caramel cake",
+  "cat_id": 4,
+  "description": "1 kg of vanilla caramel cake with rich caramel layer outside",
+  "price": 1500
+},{
+  "_id": "639818659defdf58586ef56a",
+  "cake_id": 19,
+  "cake_img": "/cake_img/C19_1166.png",
+  "cake_name": "chocolate fig cake",
+  "cat_id": 4,
+  "description": "1 kg of chocolate fig cake has rich and creamy flavor and pieces of fig on top",
+  "price": 2500
+},{
+  "_id": "639818ea9defdf58586ef56b",
+  "cake_id": 20,
+  "cake_img": "/cake_img/C20_8166.png",
+  "cake_name": "strawberry chocolate cake",
+  "cat_id": 4,
+  "description": "1 kg of Strawberry chocolate with crunchy choco chips inside",
+  "price": 1500
+}]

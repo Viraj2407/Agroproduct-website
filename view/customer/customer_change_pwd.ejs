@@ -1,0 +1,67 @@
+<script>
+    function validation()
+    {
+        if(form2.txtopwd.value=="")
+        {
+            alert("Please Enter Old Password");
+            form2.txtopwd.focus();
+            return false;
+        }
+
+
+        if(form2.txtnpwd.value=="")
+        {
+            alert("Please Enter New Password");
+            form2.txtnpwd.focus();
+            return false;
+        }
+
+        if(form2.txtcpwd.value=="")
+        {
+            alert("Please Enter Confirm Password");
+            form2.txtcpwd.focus();
+            return false;
+        }else{
+            if(form2.txtnpwd.value != form2.txtcpwd.value)
+            {
+                alert("Please Enter Confirm Password Same As New Password");
+                form2.txtcpwd.focus();
+                return false;
+            }
+        }
+    }
+</script>
+  <div class="container mt-5">
+      <h1 ><center>CHANGE PASSWORD</center></h1>
+      <div class="row mt-3">
+          <div class="col-md-6">
+              <form method="post" name="form2" action="/change_pwd">
+                  
+                   
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">ENTER OLD PASSWORD</label>
+                      <input type="password" class="form-control" placeholder="Enter Old Password" name="txtopwd">
+                      
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">ENTER NEW PASSWORD</label>
+                      <input type="password" class="form-control" placeholder="Enter New Password" name="txtnpwd">
+                      
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">ENTER CONFIRM PASSWORD</label>
+                        <input type="password" class="form-control" placeholder="Enter Confirm Password" name="txtcpwd">
+                        
+                      </div>
+                    
+                   
+                  <button type="submit" name="btnchange" style="background-color: #ab47bc;" class="btn text-light" onClick="return validation();">CHANGE PASSWORD</button>
+                  
+                </form>
+          </div>
+          <div class="col-md-6">
+              <img src="img/pwd1.jpg" style="width: 100%;">
+              <br/><br/><br/><br/><br/>
+          </div>
+      </div>
+  </div>

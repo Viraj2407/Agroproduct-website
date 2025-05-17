@@ -1,0 +1,84 @@
+
+<div class="container mt-5">
+    <h1 ><center>MANAGE Products</center></h1>
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <form method="post" action="/add_cake" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">ENTER Products NAME</label>
+                  <input type="text" class="form-control" placeholder="Enter Product Name" name="txtname">
+                  
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">ENTER Product NAME</label>
+                    <textarea class="form-control" placeholder="Enter Product Description" name="txtdesc"></textarea>
+                    
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">SELECT CATEGORY</label>
+                    <select class="form-control"  name="selcat">
+                            <option>Select Category</option>
+                        <% for(var i=0;i<catitems.length;i++){ %>
+                            <option value="<%= catitems[i].cat_id %>"><%= catitems[i].category %></option>
+                        <% } %>
+                        </select>
+                    
+                  </div>
+        </div>
+        <div class="col-md-6">
+           
+                <div class="form-group">
+                  <label for="exampleInputEmail1">ENTER Product PRICE</label>
+                  <input type="number" class="form-control" placeholder="Enter Product Price" name="txtprice">
+                  
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">SELECT Product IMAGE</label>
+                    <input type="file" class="form-control"  name="txtimg" >
+                    
+                  </div>
+                <button type="submit" style="background-color: #ab47bc;" class="btn text-light">SAVE</button>
+                
+              </form>
+           
+        </div>
+        <div class="col-md-12">
+          <% if(items.length){ %>
+            <table class="table table-bordered">
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product NAME</th>
+                    <th>DESCRIPTION</th>
+                    <th>CATEGORY</th>
+                    <th>PRICE</th>
+                    <th>Product IMAGE</th>
+                    <th>EDIT</th>
+                    <th>DELETE</th>
+                </tr>
+            <% for(var i=0;i<items.length ;i++){ %>
+                    <tr>
+                        <td><%= items[i].cake_id %></td>
+                        <td><%= items[i].cake_name %></td>
+                        <td><%= items[i].description %></td>
+                        <% for(var j=0;j<catitems.length;j++){ 
+                              if(catitems[j].cat_id==items[i].cat_id)
+                              {
+                          %>
+                                <td><%= catitems[j].category %></td>
+                          <% }
+                        } %>
+                        <td><%= items[i].price %></td>
+                        <td><img src="<%= items[i].cake_img %>" style="width: 150px; height:150px;"></td>
+                        <td><a href="/edit_cake/<%= items[i].cake_id %>">EDIT</a></td>
+                        <td><a href="/delete_cake/<%= items[i].cake_id %>">DELETE</a></td>
+                    </tr>
+            <% } %>
+            </table>
+            <br/><br/><br/><br/><br/><br/><br/><br/>
+    <% }else{ %>
+            <h3>No Products Found <br/><br/><br/><br/><br/><br/><br/><br/></h3>
+    <% } %>
+          
+        </div>
+    </div>
+</div>

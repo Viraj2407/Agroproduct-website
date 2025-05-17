@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "6389a149f5cced7e6b447445"
+  },
+  "cust_name": "parth",
+  "address": "abhrama",
+  "city": "valsad",
+  "mobile_no": "8596321470",
+  "email_id": "desaiparth0622@gmail.com",
+  "pwd": "111111",
+  "status": 1
+},{
+  "_id": {
+    "$oid": "640f5970ab50444ec77634f0"
+  },
+  "cust_name": "parag",
+  "address": "halar",
+  "city": "valsad",
+  "mobile_no": "8596321470",
+  "email_id": "parag.unadkat06@gmail.com",
+  "pwd": "111111",
+  "status": 0
+}]

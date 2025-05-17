@@ -1,0 +1,55 @@
+
+<div class="container mt-5">
+    <h1 ><center>CART DETAIL</center></h1>
+    <div class="row mt-3">
+       
+        <div class="col-md-12">
+          <% if(cartitems.length){ let tot=0 %>
+            <table class="table table-bordered">
+                <tr>
+                    <th>Product IMAGE</th>
+                    <th>Product NAME</th>
+                    <th>DESCRIPTION</th>
+
+                    <th>Quantity</th>
+                    <th>PRICE</th>
+                    <th>AMOUNT</th>
+                    <th>EDIT</th>
+                    <th>DELETE</th>
+                </tr>
+            <% for(var i=0;i<cartitems.length ;i++){ %>
+                    <tr>
+                        <%   for(var j=0;j<items.length;j++){ 
+                            if(items[j].cake_id==cartitems[i].cake_id)
+                            {
+                        %>
+                                <td><img src="<%= items[j].cake_img %>" style="width: 150px; height:150px;"></td>
+                                <td><%= items[j].cake_name %></td>
+                                <td><%= items[j].description %></td>
+                        <% }
+                      } %>
+                        <!-- <td><%= cartitems[i].qty %></td> -->
+                        <td><%= cartitems[i].cake_size %></td>
+                        <td><%= cartitems[i].price %></td>
+                        <td><% let amt=cartitems[i].cake_size * cartitems[i].price; tot = tot + amt %> 
+                            <%= amt %>
+                        </td>
+                        <td><a href="/edit_cart_items/<%= cartitems[i].cake_id %>/<%= cartitems[i].cart_detail_id %>">EDIT</a></td>
+                        <td><a href="/delete_cart_items/<%= cartitems[i].cart_detail_id %>">DELETE</a></td>
+                    </tr>
+            <% } %>
+            </table>
+
+            <br/>
+            <h3>Total Amount: &#8377; <%= tot  %>/-</h3>
+            <% if(tot>0) { %>
+            <a class="btn btn-primary" id="placeorderforselenium" href="/placed_order">PLACED ORDER</a>
+            <% } %>
+            <br/><br/><br/><br/><br/><br/><br/>
+    <% }else{ %>
+            <h3>No Products Found <br/><br/><br/><br/><br/><br/><br/><br/></h3>
+    <% } %>
+          
+        </div>
+    </div>
+</div>

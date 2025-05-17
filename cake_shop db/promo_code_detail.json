@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "6410177ae1ca0ba3244c2871"
+  },
+  "promo_code_id": 1,
+  "promo_code_name": "DIS50",
+  "dis_amount": "50",
+  "status": 1
+},{
+  "_id": {
+    "$oid": "64101796e1ca0ba3244c2872"
+  },
+  "promo_code_id": 2,
+  "promo_code_name": "DIS100",
+  "dis_amount": "100",
+  "status": 0
+},{
+  "_id": {
+    "$oid": "6410179fe1ca0ba3244c2873"
+  },
+  "promo_code_id": 3,
+  "promo_code_name": "DIS250",
+  "dis_amount": "250",
+  "status": 0
+}]

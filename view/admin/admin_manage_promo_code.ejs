@@ -1,0 +1,55 @@
+
+<div class="container mt-5">
+    <h1 ><center>MANAGE PROMO CODE</center></h1>
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <form method="post" action="/add_promo">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">ENTER PROMO CODE NAME</label>
+                  <input type="text" class="form-control" placeholder="Enter Promo Code" name="txtpromo">
+                  
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">ENTER DISCOUNT AMOUNT</label>
+                    <input type="text" class="form-control" placeholder="Enter DISCOUNT AMOUNT" name="txtamt">
+                    
+                  </div>
+                <button type="submit" style="background-color: #ab47bc;" class="btn text-light">SAVE</button>
+                
+              </form>
+        </div>
+        <div class="col-md-6">
+            <% if(promo_code.length){ %>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>PROMO CODE ID</th>
+                            <th>PROMO CODE</th>
+                            <th>DISCOUT AMOUNT</th>
+                            <th>CURRENT STATUS</th>
+                            <th>ENABLE/DISABLE</th>
+                            
+                        </tr>
+                    <% for(var i=0;i<promo_code.length ;i++){ %>
+                            <tr>
+                                <td><%= promo_code[i].promo_code_id %></td>
+                                <td><%= promo_code[i].promo_code_name %></td>
+                                <td><%= promo_code[i].dis_amount %></td>
+                                <% if(promo_code[i].status == 0){ %>
+                                    <td style="color: green;"><b>ENABLE</b></td>
+                                    <td><a class="btn btn-danger" href="/disable_promo/<%= promo_code[i].promo_code_id %>">DISABLE PROMO</a></td>
+                                <% }else{ %>
+                                    <td style="color: red;"><b>DISABLE</b></td>
+                                    <td><a class="btn btn-success" href="/enable_promo/<%= promo_code[i].promo_code_id %>">ENABLE PROMO</a></td>
+                                <% } %>
+                                
+                                
+                            </tr>
+                    <% } %>
+                    </table>
+                    <br/><br/><br/><br/><br/><br/><br/><br/>
+            <% }else{ %>
+                    <h3>No Promo Code Found <br/><br/><br/><br/><br/><br/><br/><br/></h3>
+            <% } %>
+        </div>
+    </div>
+</div>

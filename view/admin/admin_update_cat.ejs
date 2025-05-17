@@ -1,0 +1,26 @@
+
+<div class="container mt-5">
+    <h1 ><center>MANAGE CATEGORY</center></h1>
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <form method="post" action="/update_cat">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">ENTER CATEGORY ID</label>
+                    <input type="text" class="form-control" name="txtcid" value="<%= items[0].cat_id %>" readonly>
+                    
+                  </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">ENTER CATEGORY</label>
+                  <input type="text" class="form-control" placeholder="Enter Category" name="txtcat" value="<%= items[0].category %>">
+                  
+                </div>
+                
+                <button type="submit" style="background-color: #ab47bc;" class="btn text-light">UPDATE</button>
+                
+              </form>
+        </div>
+        <div class="col-md-6">
+            
+        </div>
+    </div>
+</div>

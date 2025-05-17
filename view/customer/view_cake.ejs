@@ -1,0 +1,43 @@
+
+<div class="container mt-5">
+    <h1 ><center>Products</center></h1>
+    <hr/>
+    <div class="row mt-3">
+        <div class="col-sm-3">
+            <div class="card" style="width: 15rem;">
+                <div class="card-header">
+                  CATEGORY
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a href="/view_cake">All Products</a></li>
+                <% for(var i=0;i<catitems.length ;i++){ %>
+                    <li class="list-group-item"><a href="/view_cakes/<%= catitems[i].cat_id %>"><%= catitems[i].category %></a></li>
+                <% } %>  
+                </ul>
+              </div>
+        </div>
+        <div class="col-md-8">
+            <% if(items.length){ %>
+                <div class="row">
+                <% for(var i=0;i<items.length ;i++){ %>
+                    <div class="col-md-6 mt-3">
+                        <div class="card " style="width: 18rem;">
+                            <img class="card-img-top" src="<%= items[i].cake_img %>" style="width:286px; height:199px;" alt="Card image cap">
+                            <div class="card-body">
+                            <h5 class="card-title"><%= items[i].cake_name %></h5>
+                            <p class="card-text"><b>&#8377; <%= items[i].price %> /-</b></p>
+                            <a href="/view_cake_detail/<%= items[i].cake_id %>"  id="addtocartforselenium"class="btn btn-primary">Add To Cart</a>
+                            </div>
+                        </div>
+                    </div>
+            <% 
+            }%>
+        </div>
+        <%}else{ %>
+                <h3>No Products Found <br/><br/><br/><br/><br/><br/><br/><br/></h3>
+        <% } %>
+           
+        </div>
+        
+    </div>
+</div>

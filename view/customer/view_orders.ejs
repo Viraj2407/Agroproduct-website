@@ -1,0 +1,43 @@
+
+<div class="container mt-5">
+    <h1><center>ALL ORDER DETAIL</center></h1>
+    <div class="row mt-3">
+        
+        <div class="col-md-12">
+          <% if(orditems.length){ %>
+            <table class="table table-bordered">
+                <tr>
+                    <th>ORDER ID</th>
+                    <th>ORDER DATE</th>
+                    <th>CART ID</th>
+                    <th>EMAIL ID</th>
+                    <th>DELIVERY ADDRESS</th>
+                    <th>DELIVERY MOBILE NO</th>
+                    <th>AMOUNT</th>
+                    <th>DISCOUNT AMOUNT</th>
+                    <th>NET AMOUNT</th>
+                    <th>VIEW ORDER DETAIL</th>
+                </tr>
+            <% for(var i=0;i<orditems.length ;i++){ %>
+                    <tr>
+                        <td><%= orditems[i].order_id %></td>
+                        <td><%= orditems[i].order_date %></td>
+                        <td><%= orditems[i].cart_id %></td>
+                        <td><%= orditems[i].email_id %></td>
+                        <td><%= orditems[i].del_add  %><%= orditems[i].del_city  %></td>
+                        <td><%= orditems[i].del_mno %></td>
+                        <td><%= orditems[i].order_amount %></td>
+                        <td><%= orditems[i].dis_amount %></td>
+                        <td><%= orditems[i].order_amount - orditems[i].dis_amount %></td>
+                        <td><a href="/customer_view_order_detail/<%= orditems[i].cart_id %>">VIEW ORDER DETAIL</a></td>
+                    </tr>
+            <% } %>
+            </table>
+            <br/><br/><br/><br/><br/><br/><br/><br/>
+    <% }else{ %>
+            <h3>No Order Found <br/><br/><br/><br/><br/><br/><br/><br/></h3>
+    <% } %>
+          
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<script>
+  function display_dis_amount(val)
+  {
+    form2.txtdamt.value=val;
+  }
+</script>
+<div class="container mt-5">
+    <h1 ><center>ORDER FORM</center></h1>
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <form method="post" name="form2" action="/add_order">
+                
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Address</label>
+                    <textarea class="form-control" id = "addressforselenium" placeholder="Enter Address" name="txtadd"></textarea>
+                    
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">City</label>
+                    <input type="text" class="form-control" id = "cityforselenium" placeholder="Enter City" name="txtcity">
+                    
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Mobile No</label>
+                    <input type="text" class="form-control" id = "mnoforselenium" placeholder="Enter Mobile No" name="txtmno">
+                    
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Select Promo Code</label>
+                    <select class="form-control" id = "promocodeforselenium" name="selpromo" onChange="display_dis_amount(this.value);">
+                      <option value="0">Select Promo Code</option>
+                      <% for(var i=0;i<promo_code.length ;i++){ %>
+                        <option value="<%= promo_code[i].dis_amount %>"><%= promo_code[i].promo_code_name %></option>                        <% } %>
+                      </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Select Payment Type</label>
+                    <select class="form-control" id = "paymentforselenium" name="selptype">
+                      <option value="0">Select Payment Type</option>
+                      <option value="0"id="codforsellenium">COD</option>
+                      <option value="0">Online Payment</option>
+                    
+                      </select>
+                  </div>
+
+
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Discount Amount</label>
+                    <input type="text" class="form-control" id = "discountforselenium" name="txtdamt" value="0" readonly>
+                  </div>
+                <button type="submit" id= "placedorderforselenium" name="btnord" style="background-color: #ab47bc;" class="btn text-light">PLACED ORDER</button>
+                
+              </form>
+        </div>
+        <div class="col-md-6">
+            <img src="cake_img/reg2.jpg" style="width: 100%;">
+        </div>
+    </div>
+</div>

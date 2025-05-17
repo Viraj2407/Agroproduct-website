@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "638af64e632748782cd6e8e4"
+  },
+  "cat_id": 1,
+  "category": "Fertilizers"
+},{
+  "_id": {
+    "$oid": "638af65d632748782cd6e8e5"
+  },
+  "cat_id": 2,
+  "category": "Seeds"
+},{
+  "_id": {
+    "$oid": "6398212ea06ba8143f528d9a"
+  },
+  "cat_id": 3,
+  "category": "Plants"
+},{
+  "_id": {
+    "$oid": "63982133a06ba8143f528d9b"
+  },
+  "cat_id": 4,
+  "category": "Extra"
+}]

@@ -1,0 +1,54 @@
+
+<div class="container mt-5">
+    <h1 ><center>MANAGE Product</center></h1>
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <form method="post" action="/update_cake" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">ENTER Product ID</label>
+                    <input type="text" class="form-control" name="txtcid" value="<%= items[0].cake_id %>" readonly>
+                    
+                  </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">ENTER Product NAME</label>
+                  <input type="text" class="form-control" placeholder="Enter fertilizer Name" name="txtname" value="<%= items[0].cake_name %>">
+                  
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">ENTER Product NAME</label>
+                    <textarea class="form-control" placeholder="Enter fertilizer Description" name="txtdesc"><%= items[0].description %></textarea>
+                    
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">SELECT CATEGORY</label>
+                    <select class="form-control"  name="selcat">
+                            <option>Select Category</option>
+                        <% for(var i=0;i<catitems.length;i++){ %>
+
+                            <option value="<%= catitems[i].cat_id %>" <% if(catitems[i].cat_id==items[0].cat_id){ %> selected='selected' <% } %>><%= catitems[i].category %></option>
+                        <% } %>
+                        </select>
+                    
+                  </div>
+        </div>
+        <div class="col-md-6">
+           
+                <div class="form-group">
+                  <label for="exampleInputEmail1">ENTER Product PRICE</label>
+                  <input type="number" class="form-control" placeholder="Enter fertilizer Price" name="txtprice" value="<%= items[0].price %>">
+                  
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">SELECT Product IMAGE</label>
+                    <input type="file" class="form-control"  name="txtimg" >
+                    <br/>
+                    <img src="<%= items[0].cake_img %>" style="width: 150px; height:150px;">
+                  </div>
+                <button type="submit" style="background-color: #ab47bc;" class="btn text-light">UPDATE</button>
+                
+              </form>
+           
+        </div>
+       
+    </div>
+</div>

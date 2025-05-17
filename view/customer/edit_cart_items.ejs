@@ -1,0 +1,60 @@
+<script type="text/javascript">
+    function find_amt(x)
+    {
+        var qty = parseInt(form1.txtqty.value);
+        var price = parseInt(form1.txtprice.value);
+        var amt = qty * parseInt(x) * price;
+        form1.txtamt.value=amt;
+
+    }
+
+    
+</script>
+<div class="container mt-5">
+    <h1 ><center>CAKE DETAIL</center></h1>
+    <hr />
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <h3><%= items[0].cake_name %></h3>
+            <h3><%= items[0].description %></h3>
+            <h3>&#8377; <%= items[0].price %> /- Per KG</h3>
+            <form method="post" name="form1" action="/update_cart">
+                
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Enter Quantity</label>
+                  <input type="number" class="form-control" placeholder="Enter Quantity" name="txtqty" value="<%= cartitems[0].qty %>" onchange="find_amt(this.value);">
+                  
+                </div>
+                <!-- <div class="form-group">
+                    <label for="exampleInputEmail1">Select Size</label>
+                    <select class="form-control" name="selsize" onchange="find_amt(this.value);">
+                        <option value="1" <% if(cartitems[0].cake_size==1){ %> selected=selected <% } %> >1 KG</option>
+                        <option value="2" <% if(cartitems[0].cake_size==2){ %> selected=selected <% } %>>2 KG</option>
+                        <option value="3" <% if(cartitems[0].cake_size==3){ %> selected=selected <% } %>>3 KG</option>
+                    </select>
+                    
+                  </div> -->
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Total Amount</label>
+                    <input type="number" class="form-control"  name="txtamt" id="txtamt" value="<%amt=cartitems[0].qty * cartitems[0].cake_size * cartitems[0].price %><%=amt %>" readonly>
+                    
+                  </div>
+                <button type="submit" style="background-color: #ab47bc;" class="btn text-light">UPDATE CART QUANTITY</button>
+                <div class="form-group">
+                 
+                    <input type="hidden" class="form-control" name="txtprice" value="<%= items[0].price %>">
+                    
+                  </div>
+                  <div class="form-group">
+                 
+                    <input type="hidden" class="form-control" name="txtcakeid" value="<%= items[0].cake_id %>">
+                    
+                  </div>
+              </form>
+        </div>
+        <div class="col-md-6">
+            <img src="<%= items[0].cake_img %>" style="width: 100%;">
+        </div>
+    </div>
+</div>

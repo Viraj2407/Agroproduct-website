@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Agro products</title>
+        <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ab47bc;">
+            <a class="navbar-brand" href="#">Agro Products</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                  <a class="nav-link" href="/admin_manage_cat">Manage Category <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/admin_manage_cake">Manage Products</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin_manage_promo_code">Manage Promo Code</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                  </li>
+              </ul>
+            
+            </div>
+          </nav>
+
+
+        <%- body %>
+
+        <div style="background-color: #ab47bc; ">
+            <div class="container mt-3 text-light">
+                <div class="row">
+                    <div class="col-md-12 my-5 text-center">
+                        &copy; Copyright 2023 | Designed & Maintain by Viraj Patel
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/js/jquery-2.2.3.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
+</html>
